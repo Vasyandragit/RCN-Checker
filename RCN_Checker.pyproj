@@ -2,15 +2,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>1893b6c3-9311-43f5-94f0-02fe566c3997</ProjectGuid>
+    <ProjectGuid>e6fd171e-8f65-4fae-8ae8-9e4dcb9117eb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>RCNchecker.py</StartupFile>
+    <StartupFile>bot.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>RCNchecker</Name>
-    <RootNamespace>RCNchecker</RootNamespace>
+    <Name>RCN_Checker</Name>
+    <RootNamespace>RCN_Checker</RootNamespace>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="RCNchecker.py" />
+    <Compile Include="bot.py" />
+    <Compile Include="database.py" />
+    <Compile Include="main.py" />
+    <Compile Include="news_prediction_service.py" />
+    <Compile Include="news_service.py" />
+    <Compile Include="run.py" />
+    <Compile Include="site_checker.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -1,1 +1,1 @@
-Bot tag = @cyberfresco_bot
+Bot tag = @rcn_check_bot

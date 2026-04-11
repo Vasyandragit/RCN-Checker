@@ -1,6 +1,9 @@
 import asyncio
+from weakref import proxy
 import aiohttp
 
+
+#ru_proxy = "http://188.191.164.55"
 class SiteChecker:
     async def check(self, domain: str):
         url = f"http://{domain}"

@@ -2,15 +2,12 @@ import asyncio
 from weakref import proxy
 import aiohttp
 
-<<<<<<< Updated upstream
-=======
 
 ru_proxy = "http://45.91.238.136:39218"
 with open("blocked_domains.txt", "r") as f:
     blocked_domains = set(line.strip() for line in f if line.strip())
 
 
->>>>>>> Stashed changes
 class SiteChecker:
 
     async def ping(self, domain : str):

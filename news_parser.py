@@ -19,7 +19,7 @@ class NewsParser:
             desc = article["description"]
             url = article["url"]
 
-            for keyword in ["блок", "упал", "замедле", "огранич", "недоступ", "сбой"]:
+            for keyword in ["блоки", "упал", "замедле", "огранич", "недоступ", "сбой"]:
                 
                 if keyword in title.lower():
                     news_list.append(

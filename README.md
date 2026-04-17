@@ -10,7 +10,11 @@ Bot tag = @rcn_check_bot
 
 <img width="1097" height="833" alt="image" src="https://github.com/user-attachments/assets/03a180a0-6e0c-45d6-90ec-c4b671ec724c" />
 <img width="1064" height="837" alt="image" src="https://github.com/user-attachments/assets/14b4a5cb-ad39-4085-8d74-0cc559a0c00b" />
+
+
 <img width="704" height="223" alt="image" src="https://github.com/user-attachments/assets/bb0b17ff-e7e1-4878-a604-5acbeedc4a89" />
+
+
 
 
 РАЗРАБОТКА

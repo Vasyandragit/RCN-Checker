@@ -23,11 +23,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="bot.py" />
-    <Compile Include="database.py" />
-    <Compile Include="main.py" />
-    <Compile Include="news_prediction_service.py" />
-    <Compile Include="news_service.py" />
-    <Compile Include="run.py" />
+    <Compile Include="news_parser.py" />
     <Compile Include="site_checker.py" />
   </ItemGroup>
   <ItemGroup>

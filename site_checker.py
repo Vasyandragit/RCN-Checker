@@ -1,4 +1,5 @@
 import asyncio
+from weakref import proxy
 import aiohttp
 
 <<<<<<< Updated upstream

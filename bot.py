@@ -2,6 +2,7 @@ import asyncio
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import CommandStart
 from site_checker import SiteChecker
+from news_parser import NewsParser
 
 
 TOKEN = "8348856540:AAF20LuE0nwAQkG8TaMKtvH9qqL3eFasZ-I"
@@ -32,6 +33,9 @@ async def handle_text(message: types.Message):
     await message.answer("Ищу новости...")
     news_list = await parser.get_news(f"{domain[:domain.rfind('.')]}")
 
+    if not news_list:
+        await message.answer("Новости не найдены")
+        return
 
     for news in news_list:
         if "блок" in news["title"].lower():

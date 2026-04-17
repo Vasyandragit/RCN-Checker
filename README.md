@@ -42,7 +42,13 @@ Bot tag = @rcn_check_bot
 Доступа к БД РКН они вообще могут не иметь или использовать БД, не отражающую реальное положение вещей
 <br><br>
 
-<img width="1043" height="448" alt="image" src="https://github.com/user-attachments/assets/cfb63402-330e-4304-aaa3-0ccf65f83027" />
+<img width="1054" height="812" alt="image" src="https://github.com/user-attachments/assets/b613be0f-30df-48f4-8234-b195a71d46af" />
+Официальный сайт РКН
+
+<br><br>
+
+<img width="1096" height="566" alt="image" src="https://github.com/user-attachments/assets/d2c40e72-bda8-408d-abd8-a63f03f5fbc2" />
+Первый попавшийся сайт-чекер
 
 <br><br>
 

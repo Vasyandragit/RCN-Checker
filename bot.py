@@ -10,25 +10,30 @@ bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
 
+# site status check + news check
+checker = SiteChecker()
+parser = NewsParser()
+
+
 # /start
 @dp.message(CommandStart())
 async def start_handler(message:types.Message):
     await message.answer("Привет! Отправь домен сайта")
 
 
-# site status check + news check
-checker = SiteChecker()
-parser = NewsParser()
-
-
 # user domain handling
 @dp.message()
 async def handle_text(message: types.Message):
-    domain = message.text.strip()
+    domain = message.text.replace("https://", "").replace("http://", "").replace("www.", "").rstrip('/')
     
     await message.answer("Проверяю сайт...")
-    status_result = await checker.check(domain)
+    status_result = await checker.ping(domain)
     await message.answer(f"{domain} -> {status_result}")
+    
+    
+    if checker.rcn_check(domain):
+        await message.answer("ВНИМАНИЕ \nВведённый вами адрес находится в чёрном списке РКН")
+
 
     await message.answer("Ищу новости...")
     news_list = await parser.get_news(f"{domain[:domain.rfind('.')]}")
@@ -38,13 +43,8 @@ async def handle_text(message: types.Message):
         return
 
     for news in news_list:
-        if "блок" in news["title"].lower():
-            text = (
-                f"📰 {news["title"]}\n"
-                f"{news["desc"]}\n"
-                f"{news["url"]}\n"
-            )
-            await message.answer(text)
+        await message.answer(news)
+
 
 async def main():
     await dp.start_polling(bot)
